@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react'
-import {Col, Row} from 'react-bootstrap'
+import {Col, Row, Container} from 'react-bootstrap'
 import './posts.scss'
 import Modal from './modal'
 
@@ -37,7 +37,7 @@ function Posts() {
     return (
         <div className="page">
             <div className={"modal-bg"+ (modalOn ? "--on" : "")} onClick={closeModal}></div>
-            <table>
+            <Container className="table">
                 <Row className="py-2 board">
                     <Col xs={1}>no</Col>
                     <Col xs={1}>id</Col>
@@ -55,7 +55,7 @@ function Posts() {
                         </React.Fragment>
                     </Row>
                 ))}
-            </table>
+            </Container>
         </div>
     );
 }
